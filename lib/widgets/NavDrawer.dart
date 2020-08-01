@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_centovacast_api/widgets/localisation/AppLanguage.dart';
 import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
-import 'package:provider/provider.dart';
 import 'package:launch_review/launch_review.dart';
-import 'dart:io' show Platform;
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
 
 class NavDrawer extends StatelessWidget {
   @override

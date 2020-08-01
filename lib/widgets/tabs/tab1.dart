@@ -5,9 +5,7 @@ import 'package:flutter_centovacast_api/widgets/ToastWidget.dart';
 import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
 import 'package:admob_flutter/admob_flutter.dart';
 import 'dart:io' show Platform;
-import 'package:flutter_centovacast_api/widgets/localisation/AppLanguage.dart';
 import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
-import 'package:provider/provider.dart';
 
 class Tab1 extends StatefulWidget {
   @override
@@ -46,7 +44,7 @@ class _Tab1 extends State<Tab1> {
                 ),
                 onPressed: () async {
                   print("Pressed: Start Server");
-                  _StartStreamserver();
+                  _startStreamserver();
 
                   showToast(
                     AppLocalizations.of(context).translate('process_started'),
@@ -80,7 +78,7 @@ class _Tab1 extends State<Tab1> {
                 ),
                 onPressed: () async {
                   print("Pressed: Stop Server");
-                  _StopStreamserver();
+                  _stopStreamserver();
 
                   showToast(
                     AppLocalizations.of(context).translate('process_started'),
@@ -115,7 +113,7 @@ class _Tab1 extends State<Tab1> {
  */
 
 // Start Streamserver
-_StartStreamserver() async {
+_startStreamserver() async {
   String url = '' +
       StorageUtil.getString("cc_url") +
       '/api.php?xm=server.start&f=json&a[username]=' +
@@ -135,7 +133,7 @@ _StartStreamserver() async {
 }
 
 // Stop Streamserver
-_StopStreamserver() async {
+_stopStreamserver() async {
   String url = '' +
       StorageUtil.getString("cc_url") +
       '/api.php?xm=server.stop&f=json&a[username]=' +
