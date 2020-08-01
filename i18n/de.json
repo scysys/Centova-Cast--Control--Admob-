@@ -1,0 +1,37 @@
+{
+  "app_title": "Centova Cast: Control",
+
+  "nav_server": "Server",
+  "nav_autodj": "AutoDJ",
+  "nav_configuration": "Konfiguration",
+
+  "start_server": "Server starten",
+  "stop_server": "Server stoppen",
+
+  "start_autodj": "AutoDJ starten",
+  "stop_autodj": "AutoDJ stoppen",
+
+  "process_started": "Prozess gestartet",
+
+  "configuration": "Konfiguration",
+  "enter_your_details": "Geben Sie die Anmeldedaten ein",
+  "cc_url_label": "Centova Cast: URL",
+  "cc_url_hint": "https://example.com:2199",
+  "cc_username_label": "Centova Cast: Username",
+  "cc_username_hint": "Your Centova Cast Username",
+  "cc_password_label": "Centova Cast: Passwort",
+  "cc_password_hint": "Your Centova Cast Passwort",
+
+  "language_en": "Englisch",
+  "language_de": "Deutsch",
+  "app_language": "App Sprache",
+  "save": "Speichern",
+
+  "drawer_faq": "FAQ",
+  "drawer_support": "Support",
+  "drawer_contact": "Kontakt",
+  "drawer_aboutus": "Impressum",
+  "drawer_review": "App Bewerten",
+
+  "saved_desc": "Wenn Ihre Angaben korrekt sind, sollten die Registerkarten \"Server\" und \"AutoDJ\" jetzt funktionieren.\n\nAuf einigen Geräten kann ein Neustart erforderlich sein.\n\nBitte überprüfen Sie auch Ihre Angaben.\n\nFehler Schreiben Sie uns mit einer detaillierten Beschreibung an: appccm@streampanel.net"
+}

@@ -1,0 +1,37 @@
+{
+  "app_title": "Centova Cast: Control",
+
+  "nav_server": "Server",
+  "nav_autodj": "AutoDJ",
+  "nav_configuration": "Configuration",
+
+  "start_server": "Start Server",
+  "stop_server": "Stop Server",
+
+  "start_autodj": "Start AutoDJ",
+  "stop_autodj": "Stop AutoDJ",
+
+  "process_started": "Process started",
+
+  "configuration": "Configuration",
+  "enter_your_details": "Enter login details",
+  "cc_url_label": "Centova Cast: URL",
+  "cc_url_hint": "https://example.com:2199",
+  "cc_username_label": "Centova Cast: Username",
+  "cc_username_hint": "Your Centova Cast Username",
+  "cc_password_label": "Centova Cast: Password",
+  "cc_password_hint": "Your Centova Cast Password",
+
+  "language_en": "English",
+  "language_de": "German",
+  "app_language": "App Language",
+  "save": "Save",
+
+  "drawer_faq": "FAQ",
+  "drawer_support": "Support",
+  "drawer_contact": "Contact",
+  "drawer_aboutus": "About Us",
+  "drawer_review": "Rate App",
+
+  "saved_desc": "When your details are correct, the \"Server\" and \"AutoDJ\" Tab should working now.\n\nA restart may be necessary on some devices.\n\nPlease also double check your details.\n\nOn error write us with an detailed description at: appccm@streampanel.net"
+}

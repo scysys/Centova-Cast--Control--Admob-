@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>806657619119-hjcv5al4ni0a8qfj2j48erdfr31r3km8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.806657619119-hjcv5al4ni0a8qfj2j48erdfr31r3km8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD_C5KSFzC_zjE4iow6tsO9w57lt-whU5Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>806657619119</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>net.streampanel.fluttercentovacast</string>
+	<key>PROJECT_ID</key>
+	<string>streampanel-eu-446a5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>streampanel-eu-446a5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:806657619119:ios:fb1a6a16f17d75cbbfd05a</string>
+	<key>DATABASE_URL</key>
+	<string>https://streampanel-eu-446a5.firebaseio.com</string>
+</dict>
+</plist>
