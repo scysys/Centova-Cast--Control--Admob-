@@ -49,3 +49,4 @@ app.*.map.json
 /ios/Pods/build/
 #Podfile
 #Podfile.lock
+/ios/build/

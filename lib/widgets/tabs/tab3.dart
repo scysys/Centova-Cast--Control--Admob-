@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab3_saved_message.dart';
-import 'package:admob_flutter/admob_flutter.dart';
-import 'dart:io' show Platform;
 import 'package:flutter_centovacast_api/widgets/localisation/AppLanguage.dart';
 import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
 import 'package:provider/provider.dart';
@@ -147,13 +145,6 @@ class _Tab3 extends State<Tab3> {
                   ],
                 ),
               ),
-              new Expanded(
-                child: Center(
-                    child: new AdmobBanner(
-                  adUnitId: getBannerAdUnitId(),
-                  adSize: AdmobBannerSize.FULL_BANNER,
-                )),
-              ),
               // Dev Button
               /*Container(
                   height: 75,
@@ -177,14 +168,4 @@ class _Tab3 extends State<Tab3> {
           )),
     ));
   }
-}
-
-// Find the right device and show the right admob details
-String getBannerAdUnitId() {
-  if (Platform.isIOS) {
-    return 'ca-app-pub-7700881921681700/6198192865';
-  } else if (Platform.isAndroid) {
-    return 'ca-app-pub-7700881921681700/9763755555';
-  }
-  return null;
 }
