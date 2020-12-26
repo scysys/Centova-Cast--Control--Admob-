@@ -24,14 +24,16 @@
 
   "language_en": "Englisch",
   "language_de": "Deutsch",
-  "app_language": "App Sprache",
+  "app_language": "APP Sprache",
+  "app_language_desc": "Wechseln Sie die Anzeigensprache",
   "save": "Speichern",
 
   "drawer_faq": "FAQ",
   "drawer_support": "Support",
   "drawer_contact": "Kontakt",
+  "drawer_changelog": "Changelog",
   "drawer_aboutus": "Impressum",
-  "drawer_review": "App Bewerten",
+  "drawer_review": "APP Bewerten",
 
   "saved_desc": "Wenn Ihre Angaben korrekt sind, sollten die Registerkarten \"Server\" und \"AutoDJ\" jetzt funktionieren.\n\nAuf einigen Geräten kann ein Neustart erforderlich sein.\n\nBitte überprüfen Sie auch Ihre Angaben.\n\nFehler Schreiben Sie uns mit einer detaillierten Beschreibung an: appccm@streampanel.net"
 }

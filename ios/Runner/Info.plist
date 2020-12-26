@@ -7,9 +7,14 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.streampanel.fluttercentovacast</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>de</string>
+	</array>
 	<key>CFBundleName</key>
 	<string>Centova Cast: Control</string>
 	<key>CFBundlePackageType</key>
@@ -20,6 +25,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7700881921681700~1246631979</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -41,14 +48,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>GADApplicationIdentifier</key>
-    <string>ca-app-pub-7700881921681700~1246631979</string>
-    <key>io.flutter.embedded_views_preview</key>
-    <true/>
-    <key>CFBundleLocalizations</key>
-    <array>
-        <string>en</string>
-        <string>de</string>
-    </array>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 </dict>
 </plist>

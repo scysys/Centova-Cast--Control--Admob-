@@ -24,14 +24,16 @@
 
   "language_en": "English",
   "language_de": "German",
-  "app_language": "App Language",
+  "app_language": "APP Language",
+  "app_language_desc": "Change the APP Language",
   "save": "Save",
 
   "drawer_faq": "FAQ",
   "drawer_support": "Support",
   "drawer_contact": "Contact",
+  "drawer_changelog": "Changelog",
   "drawer_aboutus": "About Us",
-  "drawer_review": "Rate App",
+  "drawer_review": "Rate APP",
 
   "saved_desc": "When your details are correct, the \"Server\" and \"AutoDJ\" Tab should working now.\n\nA restart may be necessary on some devices.\n\nPlease also double check your details.\n\nOn error write us with an detailed description at: appccm@streampanel.net"
 }

@@ -70,6 +70,20 @@ class NavDrawer extends StatelessWidget {
             },
           ),
           new ListTile(
+            leading: Icon(Icons.contact_mail),
+            title:
+            Text(AppLocalizations.of(context).translate('drawer_changelog')),
+            onTap: () async {
+              const url = 'https://www.streampanel.net/changelog-centovacast-control/';
+
+              if (await canLaunch(url)) {
+                await launch(url, forceSafariVC: false);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+          ),
+          new ListTile(
             leading: Icon(Icons.remove_red_eye),
             title:
                 Text(AppLocalizations.of(context).translate('drawer_aboutus')),

@@ -121,8 +121,19 @@ class _Tab3 extends State<Tab3> {
                   children: <Widget>[
                     Text(
                       AppLocalizations.of(context).translate('app_language'),
-                      style: TextStyle(fontSize: 26),
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30),
                     ),
+                    Container(
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          AppLocalizations.of(context)
+                              .translate('app_language_desc'),
+                          style: TextStyle(fontSize: 20),
+                        )),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
