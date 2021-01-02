@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
           ],
 
           home: AppLang(),
+          debugShowCheckedModeBanner: false,
         );
       }),
     );

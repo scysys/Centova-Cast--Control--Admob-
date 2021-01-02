@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           canvasColor: const Color(0xFF303030),
         ),
         home: new MyHomePage(),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

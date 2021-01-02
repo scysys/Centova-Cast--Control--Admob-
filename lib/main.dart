@@ -67,7 +67,8 @@ class MyApp extends StatelessWidget {
                 canvasColor: const Color(0xFF303030),
               ),
               home: new MyHomePage(),
-
+              // Hide debug button, so apple is not crying
+              debugShowCheckedModeBanner: false,
             )
         );
       }
