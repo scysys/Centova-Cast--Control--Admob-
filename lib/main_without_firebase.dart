@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_centovacast_api/widgets/NavDrawer.dart';
+import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab1.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab2.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab3.dart';
-import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
 import 'package:oktoast/oktoast.dart';
 
 void main() async {
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }

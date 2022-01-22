@@ -1,10 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_centovacast_api/widgets/localisation/AppLanguage.dart';
 import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
-
-import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -37,7 +34,6 @@ class MyApp extends StatelessWidget {
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
           ],
-
           home: AppLang(),
           debugShowCheckedModeBanner: false,
         );

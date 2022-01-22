@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class ToastWidget extends StatelessWidget {
   final String title;
   final String description;
+
   const ToastWidget({this.title, this.description});
+
   @override
   Widget build(BuildContext context) {
     return Padding(

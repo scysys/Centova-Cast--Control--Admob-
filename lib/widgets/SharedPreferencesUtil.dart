@@ -15,6 +15,7 @@ class StorageUtil {
   }
 
   StorageUtil._();
+
   Future _init() async {
     _preferences = await SharedPreferences.getInstance();
   }
