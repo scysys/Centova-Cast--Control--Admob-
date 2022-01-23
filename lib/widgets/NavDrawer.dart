@@ -33,11 +33,15 @@ class NavDrawer extends StatelessWidget {
               const url =
                   'https://www.streampanel.net/faq/centova-cast-control/';
 
-              if (await canLaunch(url)) {
-                await launch(url, forceSafariVC: false);
-              } else {
+              if (!await launch(
+                url,
+                forceSafariVC: false,
+                forceWebView: false,
+                //headers: <String, String>{'my_header_key': 'my_header_value'},
+              )) {
                 throw 'Could not launch $url';
               }
+
             },
           ),
           new ListTile(
@@ -48,11 +52,15 @@ class NavDrawer extends StatelessWidget {
               const url =
                   'https://login.streampanel.net/submitticket.php?step=2&deptid=57&language=german';
 
-              if (await canLaunch(url)) {
-                await launch(url, forceSafariVC: false);
-              } else {
+              if (!await launch(
+                url,
+                forceSafariVC: false,
+                forceWebView: false,
+                //headers: <String, String>{'my_header_key': 'my_header_value'},
+              )) {
                 throw 'Could not launch $url';
               }
+
             },
           ),
           new ListTile(
@@ -62,11 +70,15 @@ class NavDrawer extends StatelessWidget {
             onTap: () async {
               const url = 'https://www.streampanel.net/kontakt/';
 
-              if (await canLaunch(url)) {
-                await launch(url, forceSafariVC: false);
-              } else {
+              if (!await launch(
+                url,
+                forceSafariVC: false,
+                forceWebView: false,
+                //headers: <String, String>{'my_header_key': 'my_header_value'},
+              )) {
                 throw 'Could not launch $url';
               }
+
             },
           ),
           new ListTile(
@@ -77,11 +89,15 @@ class NavDrawer extends StatelessWidget {
               const url =
                   'https://www.streampanel.net/changelog-centovacast-control/';
 
-              if (await canLaunch(url)) {
-                await launch(url, forceSafariVC: false);
-              } else {
+              if (!await launch(
+                url,
+                forceSafariVC: false,
+                forceWebView: false,
+                //headers: <String, String>{'my_header_key': 'my_header_value'},
+              )) {
                 throw 'Could not launch $url';
               }
+
             },
           ),
           new ListTile(
@@ -91,11 +107,15 @@ class NavDrawer extends StatelessWidget {
             onTap: () async {
               const url = 'https://www.streampanel.net/kontakt/impressum/';
 
-              if (await canLaunch(url)) {
-                await launch(url, forceSafariVC: false);
-              } else {
+              if (!await launch(
+                url,
+                forceSafariVC: false,
+                forceWebView: false,
+                //headers: <String, String>{'my_header_key': 'my_header_value'},
+              )) {
                 throw 'Could not launch $url';
               }
+
             },
           ),
           new ListTile(
