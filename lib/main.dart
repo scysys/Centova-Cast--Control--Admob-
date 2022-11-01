@@ -1,84 +1,57 @@
 import 'dart:io' show Platform;
-
-import 'package:admob_flutter/admob_flutter.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_centovacast_api/widgets/NavDrawer.dart';
 import 'package:flutter_centovacast_api/widgets/SharedPreferencesUtil.dart';
-import 'package:flutter_centovacast_api/widgets/localisation/AppLanguage.dart';
-import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab1.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab2.dart';
 import 'package:flutter_centovacast_api/widgets/tabs/tab3.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:provider/provider.dart';
 
-void main() async {
+List<String> testDeviceIds = ['8C9A06DEA79BB5365ED3552E5D3F0458'];
+
+main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  AppLanguage appLanguage = AppLanguage();
-  await appLanguage.fetchLocale();
-
   await StorageUtil.getInstance();
-  await Firebase.initializeApp();
 
-  FirebaseAnalytics();
+  // Initialize ADS
+  if (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS) {
+    RequestConfiguration configuration = RequestConfiguration(testDeviceIds: testDeviceIds);
+    MobileAds.instance.updateRequestConfiguration(configuration);
+    MobileAds.instance.initialize();
+  }
 
-  Admob.initialize();
-
-  runApp(MyApp(
-    appLanguage: appLanguage,
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final AppLanguage appLanguage;
-
-  MyApp({this.appLanguage});
-
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<AppLanguage>(
-      create: (_) => appLanguage,
-      child: Consumer<AppLanguage>(builder: (context, model, child) {
-        return OKToast(
-            child: MaterialApp(
-          locale: model.appLocal,
+    return OKToast(
+        child: MaterialApp(
+      // Multilingual
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
 
-          supportedLocales: [
-            Locale('en', ''),
-            Locale('de', ''),
-          ],
+      title: 'Centova Cast: Control',
 
-          localizationsDelegates: [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-          ],
+      //theme: new ThemeData(primarySwatch: Colors.grey),
+      themeMode: ThemeMode.dark,
+      //theme: ThemeData(primarySwatch: Colors.indigo, brightness: Brightness.light),
+      darkTheme: ThemeData(primarySwatch: Colors.orange, brightness: Brightness.dark),
 
-          title: 'Centova Cast: Control',
-
-          theme: new ThemeData(
-            brightness: Brightness.dark,
-            primarySwatch: Colors.blue,
-            primaryColor: const Color(0xFF212121),
-            accentColor: const Color(0xFF64ffda),
-            canvasColor: const Color(0xFF303030),
-          ),
-          home: new MyHomePage(),
-          // Hide debug button, so apple is not crying
-          debugShowCheckedModeBanner: false,
-        ));
-      }),
-    );
+      home: new MyHomePage(),
+      // home: Scaffold(body: MyHomePage()),
+      // Hide debug button, so apple is not crying
+      debugShowCheckedModeBanner: false,
+    ));
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
@@ -93,19 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           bottom: TabBar(
             tabs: [
-              Tab(
-                  icon: Icon(Icons.filter_drama),
-                  text: AppLocalizations.of(context).translate('nav_server')),
-              Tab(
-                  icon: Icon(Icons.music_note),
-                  text: AppLocalizations.of(context).translate('nav_autodj')),
-              Tab(
-                  icon: Icon(Icons.settings),
-                  text: AppLocalizations.of(context)
-                      .translate('nav_configuration')),
+              Tab(icon: Icon(Icons.filter_drama), text: AppLocalizations.of(context)!.nav_server),
+              Tab(icon: Icon(Icons.music_note), text: AppLocalizations.of(context)!.nav_autodj),
+              Tab(icon: Icon(Icons.settings), text: AppLocalizations.of(context)!.nav_configuration),
             ],
           ),
-          title: Text(AppLocalizations.of(context).translate('app_title')),
+          title: Text(AppLocalizations.of(context)!.app_title),
         ),
         body: TabBarView(
           children: [
@@ -125,6 +91,7 @@ String getBannerAdUnitId() {
     return 'ca-app-pub-7700881921681700/6198192865';
   } else if (Platform.isAndroid) {
     return 'ca-app-pub-7700881921681700/9763755555';
+  } else {
+    throw UnsupportedError("Unsupported platform");
   }
-  return null;
 }

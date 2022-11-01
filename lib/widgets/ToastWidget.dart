@@ -4,7 +4,7 @@ class ToastWidget extends StatelessWidget {
   final String title;
   final String description;
 
-  const ToastWidget({this.title, this.description});
+  const ToastWidget({required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +23,7 @@ class ToastWidget extends StatelessWidget {
               children: <Widget>[
                 Text(
                   title,
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w900),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900),
                 ),
                 Text(
                   description,

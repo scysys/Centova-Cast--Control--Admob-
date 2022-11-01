@@ -1,8 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageUtil {
-  static StorageUtil _storageUtil;
-  static SharedPreferences _preferences;
+  static StorageUtil? _storageUtil;
+  static SharedPreferences? _preferences;
 
   static Future getInstance() async {
     if (_storageUtil == null) {
@@ -23,12 +23,12 @@ class StorageUtil {
   // get string
   static String getString(String key, {String defValue = ''}) {
     if (_preferences == null) return defValue;
-    return _preferences.getString(key) ?? defValue;
+    return _preferences?.getString(key) ?? defValue;
   }
 
   // put string
-  static Future putString(String key, String value) {
+  static Future? putString(String key, String value) {
     if (_preferences == null) return null;
-    return _preferences.setString(key, value);
+    return _preferences?.setString(key, value);
   }
 }

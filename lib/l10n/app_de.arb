@@ -1,6 +1,8 @@
 {
   "app_title": "Centova Cast: Control",
 
+  "header_description": "Professionelles Hosting von einem der größten Streamserver-Hoster in Europa.",
+
   "nav_server": "Server",
   "nav_autodj": "AutoDJ",
   "nav_configuration": "Konfiguration",
@@ -24,8 +26,6 @@
 
   "language_en": "Englisch",
   "language_de": "Deutsch",
-  "app_language": "APP Sprache",
-  "app_language_desc": "Wechseln Sie die Anzeigensprache",
   "save": "Speichern",
 
   "drawer_faq": "FAQ",

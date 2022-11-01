@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_centovacast_api/widgets/localisation/AppLocalizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ButtonPressed extends StatefulWidget {
   @override
@@ -18,12 +18,9 @@ class _ButtonPressedState extends State<ButtonPressed> {
       // create a popup to show some msg.
       body: new Container(
         child: new Text(
-          AppLocalizations.of(context).translate('saved_desc'),
+          AppLocalizations.of(context)!.saved_desc,
           style: new TextStyle(
-              fontSize: 16.0,
-              color: const Color(0xFFffffff),
-              fontWeight: FontWeight.w200,
-              fontFamily: "Roboto"),
+              fontSize: 16.0, color: const Color(0xFFffffff), fontWeight: FontWeight.w200, fontFamily: "Roboto"),
         ),
         padding: const EdgeInsets.all(15),
         alignment: Alignment.center,
