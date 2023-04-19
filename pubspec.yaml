@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.9+9
+version: 1.1.0+10
 
 environment:
   sdk: ">=2.17.5 <3.0.0"
@@ -27,18 +27,18 @@ dependencies:
     sdk: flutter
   ### Multiple Languages
   intl: ^0.17.0 # https://pub.dev/packages/intl // All Plattforms
-  flutter_html: 2.2.1
-  http: 0.13.5
-  shared_preferences: 2.0.15
-  url_launcher: 6.1.6
-  oktoast: 3.3.1
+  flutter_html: 2.2.1 # https://pub.dev/packages/flutter_html
+  http: 0.13.5 # https://pub.dev/packages/http
+  shared_preferences: 2.1.0 # https://pub.dev/packages/shared_preferences
+  url_launcher: 6.1.10 # https://pub.dev/packages/url_launcher
+  oktoast: 3.3.1 # https://pub.dev/packages/oktoast
   ### Google Admob
   google_mobile_ads: ^2.2.0 # https://pub.dev/packages/google_mobile_ads // Android, IOS
-  launch_review: 3.0.1
+  launch_review: 3.0.1 # https://pub.dev/packages/launch_review
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: 1.0.5
+  cupertino_icons: 1.0.5 # https://pub.dev/packages/cupertino_icons
 
 
 # Using it with dependencies-overrides because of failure in flutter_html
@@ -48,7 +48,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: 0.10.0
+  flutter_launcher_icons: 0.10.0 # https://pub.dev/packages/flutter_launcher_icons
   #intl_translation: ^0.17.10+1
 
 # https://pub.dev/packages/flutter_launcher_icons
